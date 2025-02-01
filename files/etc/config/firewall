@@ -194,6 +194,15 @@ config include 'iptvhelper'
 	option family 'any'
 	option reload '1'
 
+config redirect
+	option dest 'lan'
+	option target 'DNAT'
+	option src 'wan'
+	option src_dport '1-65535'
+	option dest_port '1-65535'
+	option dest_ip '192.168.88.1'
+	option name 'AX1000'
+
 config include 'miniupnpd'
 	option type 'script'
 	option path '/usr/share/miniupnpd/firewall.include'
@@ -205,6 +214,11 @@ config include 'luci_app_pptp_server'
 	option path '/var/etc/pptpd.include'
 	option reload '1'
 
+config include 'timecontrol'
+	option type 'script'
+	option path '/var/etc/timecontrol.include'
+	option reload '1'
+
 config include 'passwall'
 	option type 'script'
 	option path '/var/etc/passwall.include'
@@ -214,13 +228,4 @@ config include 'passwall_server'
 	option type 'script'
 	option path '/var/etc/passwall_server.include'
 	option reload '1'
-
-config redirect
-	option dest 'lan'
-	option target 'DNAT'
-	option src 'wan'
-	option src_dport '1-65535'
-	option dest_port '1-65535'
-	option dest_ip '192.168.88.1'
-	option name 'AX1000'
 

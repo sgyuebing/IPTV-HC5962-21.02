@@ -32,3 +32,8 @@ config led
 	list mode 'rx'
 	option sysfs 'blue:internet'
 
+config imm_init
+	option lang '1'
+	option anon_mount '1'
+	option system_chn '1'
+

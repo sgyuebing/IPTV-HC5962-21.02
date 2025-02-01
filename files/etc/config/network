@@ -34,6 +34,7 @@ config interface 'china_telecom'
 	option device 'lan1'
 	option hostname '*'
 	option delegate '0'
+	option defaultroute '0'
 
 config device
 	option name 'lan1'
@@ -46,6 +47,8 @@ config interface 'iptv_sdyx'
 	option gateway '10.94.0.1'
 	option broadcast '10.94.255.255'
 	option delegate '0'
+	option defaultroute '0'
+	option force_link '0'
 
 config device
 	option name 'lan2'
