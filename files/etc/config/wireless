@@ -8,7 +8,6 @@ config wifi-device 'radio0'
 	option channel 'auto'
 	option cell_density '0'
 	option mu_beamformer '1'
-	option noscan '1'
 	option txpower '20'
 
 config wifi-iface 'default_radio0'

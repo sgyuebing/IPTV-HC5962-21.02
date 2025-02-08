@@ -52,6 +52,6 @@ config interface 'iptv_sdyx'
 
 config device
 	option name 'lan2'
-	option igmpversion '2'
 	option ipv6 '0'
+	option igmpversion '3'
 
